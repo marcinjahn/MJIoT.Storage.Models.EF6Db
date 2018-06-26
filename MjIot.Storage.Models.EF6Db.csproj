@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5EEEEF8E-C2A3-4924-A47A-2FA31DE6708C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MJIoT_DBModel</RootNamespace>
+    <AssemblyName>MJIoT_DBModel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes.cs" />
+    <Compile Include="Migrations\201710011432075_InitialModel.cs" />
+    <Compile Include="Migrations\201710011432075_InitialModel.Designer.cs">
+      <DependentUpon>201710011432075_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710011504026_AddIoTHubKeyPropertyToDevicesTable.cs" />
+    <Compile Include="Migrations\201710011504026_AddIoTHubKeyPropertyToDevicesTable.Designer.cs">
+      <DependentUpon>201710011504026_AddIoTHubKeyPropertyToDevicesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071741351_FixForConnectedDevicesToBeManyToMany.cs" />
+    <Compile Include="Migrations\201710071741351_FixForConnectedDevicesToBeManyToMany.Designer.cs">
+      <DependentUpon>201710071741351_FixForConnectedDevicesToBeManyToMany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071758217_AddedUsersTable.cs" />
+    <Compile Include="Migrations\201710071758217_AddedUsersTable.Designer.cs">
+      <DependentUpon>201710071758217_AddedUsersTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710071821369_FixPropertyTypesTableToIncludeTypeEnum.cs" />
+    <Compile Include="Migrations\201710071821369_FixPropertyTypesTableToIncludeTypeEnum.Designer.cs">
+      <DependentUpon>201710071821369_FixPropertyTypesTableToIncludeTypeEnum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710220954417_AdditionOfSenderAndListenerPropertiesToDeviceType.cs" />
+    <Compile Include="Migrations\201710220954417_AdditionOfSenderAndListenerPropertiesToDeviceType.Designer.cs">
+      <DependentUpon>201710220954417_AdditionOfSenderAndListenerPropertiesToDeviceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710221000156_AdditionOfNamePropertyForDevicesTable.cs" />
+    <Compile Include="Migrations\201710221000156_AdditionOfNamePropertyForDevicesTable.Designer.cs">
+      <DependentUpon>201710221000156_AdditionOfNamePropertyForDevicesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710221209377_RemovalOfNamePropertyForDevicesTable.cs" />
+    <Compile Include="Migrations\201710221209377_RemovalOfNamePropertyForDevicesTable.Designer.cs">
+      <DependentUpon>201710221209377_RemovalOfNamePropertyForDevicesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710221211503_AddedUIConfigurableToDevicepropertyTable.cs" />
+    <Compile Include="Migrations\201710221211503_AddedUIConfigurableToDevicepropertyTable.Designer.cs">
+      <DependentUpon>201710221211503_AddedUIConfigurableToDevicepropertyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710221258215_RemvedDevicesColectionFromUserAndAddedUserToDeviceTable.cs" />
+    <Compile Include="Migrations\201710221258215_RemvedDevicesColectionFromUserAndAddedUserToDeviceTable.Designer.cs">
+      <DependentUpon>201710221258215_RemvedDevicesColectionFromUserAndAddedUserToDeviceTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201710221509033_AddedIsAbstractToDeviceType.cs" />
+    <Compile Include="Migrations\201710221509033_AddedIsAbstractToDeviceType.Designer.cs">
+      <DependentUpon>201710221509033_AddedIsAbstractToDeviceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711041903245_MovedUIConfigurablePropertyToPropertyTypesTable.cs" />
+    <Compile Include="Migrations\201711041903245_MovedUIConfigurablePropertyToPropertyTypesTable.Designer.cs">
+      <DependentUpon>201711041903245_MovedUIConfigurablePropertyToPropertyTypesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711191623375_ChangedConnectedDevicePropertyNameToListenerDevices.cs" />
+    <Compile Include="Migrations\201711191623375_ChangedConnectedDevicePropertyNameToListenerDevices.Designer.cs">
+      <DependentUpon>201711191623375_ChangedConnectedDevicePropertyNameToListenerDevices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803011536297_AdditionOfOfflineMessagingPropertyOfDeviceType.cs" />
+    <Compile Include="Migrations\201803011536297_AdditionOfOfflineMessagingPropertyOfDeviceType.Designer.cs">
+      <DependentUpon>201803011536297_AdditionOfOfflineMessagingPropertyOfDeviceType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803181532056_AddedMultiSenderAndListenerPropertiesOfDeviceCapabilityAndConnectionsTableWithConditionOptionToSpecify.cs" />
+    <Compile Include="Migrations\201803181532056_AddedMultiSenderAndListenerPropertiesOfDeviceCapabilityAndConnectionsTableWithConditionOptionToSpecify.Designer.cs">
+      <DependentUpon>201803181532056_AddedMultiSenderAndListenerPropertiesOfDeviceCapabilityAndConnectionsTableWithConditionOptionToSpecify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803181604071_FixedNamingOfConnectionsToConnection.cs" />
+    <Compile Include="Migrations\201803181604071_FixedNamingOfConnectionsToConnection.Designer.cs">
+      <DependentUpon>201803181604071_FixedNamingOfConnectionsToConnection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803271519317_ChangedValueToPropertyValueInDevicePropertyClass.cs" />
+    <Compile Include="Migrations\201803271519317_ChangedValueToPropertyValueInDevicePropertyClass.Designer.cs">
+      <DependentUpon>201803271519317_ChangedValueToPropertyValueInDevicePropertyClass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803311426059_FixedTypoInConnections_ContitionValueToConditionValue.cs" />
+    <Compile Include="Migrations\201803311426059_FixedTypoInConnections_ContitionValueToConditionValue.Designer.cs">
+      <DependentUpon>201803311426059_FixedTypoInConnections_ContitionValueToConditionValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121259515_ChangedPropertyTypeFormatsAndRenamedConditionsToFiltersAndAddedCalculationsForConnections.cs" />
+    <Compile Include="Migrations\201805121259515_ChangedPropertyTypeFormatsAndRenamedConditionsToFiltersAndAddedCalculationsForConnections.Designer.cs">
+      <DependentUpon>201805121259515_ChangedPropertyTypeFormatsAndRenamedConditionsToFiltersAndAddedCalculationsForConnections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805121724407_AddedConnectionCalculation_None.cs" />
+    <Compile Include="Migrations\201805121724407_AddedConnectionCalculation_None.Designer.cs">
+      <DependentUpon>201805121724407_AddedConnectionCalculation_None.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.cs" />
+    <Compile Include="Migrations\201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.Designer.cs">
+      <DependentUpon>201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="MJIoTDBContext.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201710011432075_InitialModel.resx">
+      <DependentUpon>201710011432075_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710011504026_AddIoTHubKeyPropertyToDevicesTable.resx">
+      <DependentUpon>201710011504026_AddIoTHubKeyPropertyToDevicesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071741351_FixForConnectedDevicesToBeManyToMany.resx">
+      <DependentUpon>201710071741351_FixForConnectedDevicesToBeManyToMany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071758217_AddedUsersTable.resx">
+      <DependentUpon>201710071758217_AddedUsersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710071821369_FixPropertyTypesTableToIncludeTypeEnum.resx">
+      <DependentUpon>201710071821369_FixPropertyTypesTableToIncludeTypeEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710220954417_AdditionOfSenderAndListenerPropertiesToDeviceType.resx">
+      <DependentUpon>201710220954417_AdditionOfSenderAndListenerPropertiesToDeviceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710221000156_AdditionOfNamePropertyForDevicesTable.resx">
+      <DependentUpon>201710221000156_AdditionOfNamePropertyForDevicesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710221209377_RemovalOfNamePropertyForDevicesTable.resx">
+      <DependentUpon>201710221209377_RemovalOfNamePropertyForDevicesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710221211503_AddedUIConfigurableToDevicepropertyTable.resx">
+      <DependentUpon>201710221211503_AddedUIConfigurableToDevicepropertyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710221258215_RemvedDevicesColectionFromUserAndAddedUserToDeviceTable.resx">
+      <DependentUpon>201710221258215_RemvedDevicesColectionFromUserAndAddedUserToDeviceTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710221509033_AddedIsAbstractToDeviceType.resx">
+      <DependentUpon>201710221509033_AddedIsAbstractToDeviceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711041903245_MovedUIConfigurablePropertyToPropertyTypesTable.resx">
+      <DependentUpon>201711041903245_MovedUIConfigurablePropertyToPropertyTypesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711191623375_ChangedConnectedDevicePropertyNameToListenerDevices.resx">
+      <DependentUpon>201711191623375_ChangedConnectedDevicePropertyNameToListenerDevices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803011536297_AdditionOfOfflineMessagingPropertyOfDeviceType.resx">
+      <DependentUpon>201803011536297_AdditionOfOfflineMessagingPropertyOfDeviceType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803181532056_AddedMultiSenderAndListenerPropertiesOfDeviceCapabilityAndConnectionsTableWithConditionOptionToSpecify.resx">
+      <DependentUpon>201803181532056_AddedMultiSenderAndListenerPropertiesOfDeviceCapabilityAndConnectionsTableWithConditionOptionToSpecify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803181604071_FixedNamingOfConnectionsToConnection.resx">
+      <DependentUpon>201803181604071_FixedNamingOfConnectionsToConnection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803271519317_ChangedValueToPropertyValueInDevicePropertyClass.resx">
+      <DependentUpon>201803271519317_ChangedValueToPropertyValueInDevicePropertyClass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803311426059_FixedTypoInConnections_ContitionValueToConditionValue.resx">
+      <DependentUpon>201803311426059_FixedTypoInConnections_ContitionValueToConditionValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121259515_ChangedPropertyTypeFormatsAndRenamedConditionsToFiltersAndAddedCalculationsForConnections.resx">
+      <DependentUpon>201805121259515_ChangedPropertyTypeFormatsAndRenamedConditionsToFiltersAndAddedCalculationsForConnections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805121724407_AddedConnectionCalculation_None.resx">
+      <DependentUpon>201805121724407_AddedConnectionCalculation_None.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.resx">
+      <DependentUpon>201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
