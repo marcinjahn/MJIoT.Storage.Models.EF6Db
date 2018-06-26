@@ -5,14 +5,14 @@ namespace MJIoT_DBModel.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<MJIoT_DBModel.MJIoTDBContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<MjIot.Storage.Models.EF6Db.MJIoTDBContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(MJIoT_DBModel.MJIoTDBContext context)
+        protected override void Seed(MjIot.Storage.Models.EF6Db.MJIoTDBContext context)
         {
             //  This method will be called after migrating to the latest version.
 

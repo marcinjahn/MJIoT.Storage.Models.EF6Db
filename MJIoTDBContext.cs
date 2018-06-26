@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MJIoT_DBModel
+namespace MjIot.Storage.Models.EF6Db
 {
     public class MJIoTDBContext : DbContext
     {
