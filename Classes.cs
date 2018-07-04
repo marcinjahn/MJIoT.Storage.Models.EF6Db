@@ -71,33 +71,32 @@ namespace MjIot.Storage.Models.EF6Db
 
     public enum PropertyFormat : int
     {
-        Boolean,  //przełącznik
-        //OneByte,  //np. PWM, coś w rodzaju Int, bezpieczny zakres 0-255
-        String,   //string - informuje, że: jest stringiem oraz, że dane urządzenie odbiera informacje "surowe", cyzli w tkaiej formie w jakiej zostało wysłane z nadawcy - dlatego, że każda propercja zapisuje dane jako string!
-        Number  //zmiennoprzecinkowe
+        Boolean,
+        String,  
+        Number
     };
 
     public enum ConnectionFilter
     {
+        None,
         Equal,
         Greater,
         GreaterOrEqual,
         Less,
         LessOrEqual,
-        NotEqual,
-        None  //means that every sender value will be sent to listener
+        NotEqual
     }
 
     public enum ConnectionCalculation
     {
-        Proportional,  //procentowo przelicza
+        None,
+        //Proportional,  //procentowo przelicza
         Addition,
         Subtraction,
         Product,
         Division,
         BooleanNot,
         BooleanAnd,
-        BooleanOr,
-        None
+        BooleanOr
     }
 }
