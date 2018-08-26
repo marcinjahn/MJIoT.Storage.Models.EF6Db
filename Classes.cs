@@ -15,6 +15,7 @@ namespace MjIot.Storage.Models.EF6Db
         public bool UIConfigurable { get; set; }
         public bool IsListenerProperty { get; set; }
         public bool IsSenderProperty { get; set; }
+        public bool IsHistorized { get; set; }
     }
 
     public class DeviceType
@@ -90,13 +91,13 @@ namespace MjIot.Storage.Models.EF6Db
     public enum ConnectionCalculation
     {
         None,
-        //Proportional,  //procentowo przelicza
         Addition,
         Subtraction,
         Product,
         Division,
         BooleanNot,
         BooleanAnd,
-        BooleanOr
+        BooleanOr,
+        Custom
     }
 }

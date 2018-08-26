@@ -137,6 +137,14 @@
     <Compile Include="Migrations\201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.Designer.cs">
       <DependentUpon>201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807181431180_AddIsHistorizedPropertyToPropertyType.cs" />
+    <Compile Include="Migrations\201807181431180_AddIsHistorizedPropertyToPropertyType.Designer.cs">
+      <DependentUpon>201807181431180_AddIsHistorizedPropertyToPropertyType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808261152209_AddCustomCalculation.cs" />
+    <Compile Include="Migrations\201808261152209_AddCustomCalculation.Designer.cs">
+      <DependentUpon>201808261152209_AddCustomCalculation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MJIoTDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -208,6 +216,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.resx">
       <DependentUpon>201805151518358_AddedUserToConnectionAndChangedPropertyTypeFormatToPropertyFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807181431180_AddIsHistorizedPropertyToPropertyType.resx">
+      <DependentUpon>201807181431180_AddIsHistorizedPropertyToPropertyType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808261152209_AddCustomCalculation.resx">
+      <DependentUpon>201808261152209_AddCustomCalculation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
